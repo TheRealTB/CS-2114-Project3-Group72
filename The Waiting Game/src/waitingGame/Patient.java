@@ -18,22 +18,23 @@ public class Patient {
     private String[][] data;
     
     
-    
+    //Creates a new patient from Patient Generator using generatePatient
     public Patient() {
         try (BufferedReader reader = new BufferedReader
             (new FileReader("Patient Generator"))) {
             //Basic CSV traversal with values saved to 2D array
-            data = new String[100][7];
+            //Set the # rows to the number of rows in Patient Generator
+            data = new String[1000][7];
             String line;
             int row = 0;
             while ((line = reader.readLine()) != null) {
                 String[] values = line.split(",");
                 int col = 0;
                 for (String value : values) {
-                    data[row][col] = value.trim();
+                    data[row][col] = value;
                     col++;
                 }
-                //System.out.println(Arrays.toString(data[r]));
+                //System.out.println(Arrays.toString(data[row]));
                 row++;
             }
             reader.close();
@@ -56,6 +57,21 @@ public class Patient {
         this.generatePatient();
     }
     
+    //Patient classification by criticality
+    //These criticality values are subject to change
+    public String classifyPatient() {
+        return (criticality>66) ? "Priority Admit" : (criticality>33) ? "Admit" : "Deny";
+    }
+    
+    //Patient info (chart style)
+    @Override
+    public String toString() {
+        String s = "First Name: " + this.firstName + "\nLast Name: " + this.lastName
+            + "\nAge: " + this.age + "Occupation: " + this.occupation + "\nSymptoms: " + this.symptoms;
+        return s;
+    }
+    
+    //Create and edit patients below this line
     public void generatePatient() {
         //generates random 12 digit string and initializes variables with seed
         String randSeed = Math.random() + "";
@@ -84,8 +100,8 @@ public class Patient {
                     System.out.printf("Statement has hit default case\n\n");
             }
         }
-        System.out.printf("Name: %s %s, Age: %d,\nOccupation: %s,"
-            + " Illness: %s,\nSymptoms: %s, Criticality: %d\n\n",
+        System.out.printf("Name: %s %s, Age: %d, Occupation: %s,"
+            + " \nIllness: %s,Symptoms: %s, Criticality: %d\n\n",
             firstName, lastName, age, occupation, 
             illness, symptoms, criticality);
     }
