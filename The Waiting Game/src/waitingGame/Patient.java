@@ -7,12 +7,11 @@
  */
 package waitingGame;
 
-import java.util.*;
+//import java.util.*;
 import java.io.*;
 
 //TODO: Make more interesting/unique illnesses & symptoms + multi-symptom
-//TODON'T Autoformat code pls
-@SuppressWarnings("javadoc")
+
 public class Patient {
     private String firstName, lastName, occupation, illness, symptoms;
     private int age, criticality;
