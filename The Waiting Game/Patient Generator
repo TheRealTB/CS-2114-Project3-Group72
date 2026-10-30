@@ -1,0 +1,100 @@
+Alice,Johnson,1,Teacher,Flu,Fever and Cough,55
+Bob,Smith,2,Engineer,Fracture,Leg pain,85
+Charlie,Davis,3,Nurse,Migraine,Headache and sensitivity,45
+Diana,Wilson,4,Chef,Food Poisoning,Nausea,50
+Ethan,Miller,5,Student,Sprain,Ankle swelling,25
+Fiona,Moore,6,Artist,Allergies,Rash,20
+George,Taylor,7,Driver,Fatigue,Dizziness,15
+Hannah,Anderson,8,Developer,Stress,Chest tightness,10
+Ian,Thomas,9,Banker,Back Pain,Lower back ache,25
+Julia,Jackson,10,Doctor,Cold,Runny nose,10
+Kevin,White,11,Teacher,Flu,Fever and Cough,55
+Laura,Harris,12,Engineer,Fracture,Leg pain,85
+Michael,Martin,13,Nurse,Migraine,Headache and sensitivity,45
+Nina,Thompson,14,Chef,Food Poisoning,Nausea,50
+Oscar,Garcia,15,Student,Sprain,Ankle swelling,25
+Paula,Martinez,16,Artist,Allergies,Rash,20
+Quinn,Robinson,17,Driver,Fatigue,Dizziness,15
+Ryan,Clark,18,Developer,Stress,Chest tightness,10
+Sarah,Rodriguez,19,Banker,Back Pain,Lower back ache,25
+Tom,Lewis,20,Doctor,Cold,Runny nose,10
+Ursula,Lee,21,Teacher,Flu,Fever and Cough,55
+Victor,Walker,22,Engineer,Fracture,Leg pain,85
+Wendy,Hall,23,Nurse,Migraine,Headache and sensitivity,45
+Xavier,Allen,24,Chef,Food Poisoning,Nausea,50
+Yara,Young,25,Student,Sprain,Ankle swelling,25
+Zane,King,26,Artist,Allergies,Rash,20
+Abigail,Wright,27,Driver,Fatigue,Dizziness,15
+Benjamin,Scott,28,Developer,Stress,Chest tightness,10
+Clara,Green,29,Banker,Back Pain,Lower back ache,25
+David,Baker,30,Doctor,Cold,Runny nose,10
+Elena,Adams,31,Teacher,Flu,Fever and Cough,55
+Felix,Nelson,32,Engineer,Fracture,Leg pain,85
+Grace,Hill,33,Nurse,Migraine,Headache and sensitivity,45
+Henry,Ramirez,34,Chef,Food Poisoning,Nausea,50
+Isabel,Campbell,35,Student,Sprain,Ankle swelling,25
+Jack,Mitchell,36,Artist,Allergies,Rash,20
+Karen,Roberts,37,Driver,Fatigue,Dizziness,15
+Liam,Carter,38,Developer,Stress,Chest tightness,10
+Maya,Phillips,39,Banker,Back Pain,Lower back ache,25
+Noah,Evans,40,Doctor,Cold,Runny nose,10
+Olivia,Turner,41,Teacher,Flu,Fever and Cough,55
+Peter,Diaz,42,Engineer,Fracture,Leg pain,85
+Quincy,Parker,43,Nurse,Migraine,Headache and sensitivity,45
+Rachel,Cruz,44,Chef,Food Poisoning,Nausea,50
+Samuel,Edwards,45,Student,Sprain,Ankle swelling,25
+Teresa,Collins,46,Artist,Allergies,Rash,20
+Ulysses,Reyes,47,Driver,Fatigue,Dizziness,15
+Violet,Stewart,48,Developer,Stress,Chest tightness,10
+William,Morris,49,Banker,Back Pain,Lower back ache,25
+Xena,Murphy,50,Doctor,Cold,Runny nose,10
+Yusuf,Rivera,51,Teacher,Flu,Fever and Cough,55
+Zoe,Cook,52,Engineer,Fracture,Leg pain,85
+Aaron,Rogers,53,Nurse,Migraine,Headache and sensitivity,45
+Bella,Morgan,54,Chef,Food Poisoning,Nausea,50
+Caleb,Peterson,55,Student,Sprain,Ankle swelling,25
+Daisy,Cooper,56,Artist,Allergies,Rash,20
+Elias,Reed,57,Driver,Fatigue,Dizziness,15
+Faith,Bailey,58,Developer,Stress,Chest tightness,10
+Gabriel,Bell,59,Banker,Back Pain,Lower back ache,25
+Holly,Gomez,60,Doctor,Cold,Runny nose,10
+Isaac,Kelly,61,Teacher,Flu,Fever and Cough,55
+Jade,Howard,62,Engineer,Fracture,Leg pain,85
+Kyle,Ward,63,Nurse,Migraine,Headache and sensitivity,45
+Lily,Cox,64,Chef,Food Poisoning,Nausea,50
+Miles,Diaz,65,Student,Sprain,Ankle swelling,25
+Nora,Richardson,66,Artist,Allergies,Rash,20
+Owen,Wood,67,Driver,Fatigue,Dizziness,15
+Piper,Watson,68,Developer,Stress,Chest tightness,10
+Quinn,Brooks,69,Banker,Back Pain,Lower back ache,25
+Rose,Bennett,70,Doctor,Cold,Runny nose,10
+Seth,Gray,71,Teacher,Flu,Fever and Cough,55
+Tess,James,72,Engineer,Fracture,Leg pain,85
+Uri,Patterson,73,Nurse,Migraine,Headache and sensitivity,45
+Vera,Hughes,74,Chef,Food Poisoning,Nausea,50
+Wyatt,Flores,75,Student,Sprain,Ankle swelling,25
+Xandra,Washington,76,Artist,Allergies,Rash,20
+Yosef,Butler,77,Driver,Fatigue,Dizziness,15
+Zara,Simmons,78,Developer,Stress,Chest tightness,10
+Adam,Foster,79,Banker,Back Pain,Lower back ache,25
+Brooke,Gonzales,80,Doctor,Cold,Runny nose,10
+Connor,Bryant,81,Teacher,Flu,Fever and Cough,55
+Della,Alexander,82,Engineer,Fracture,Leg pain,85
+Ezra,Russell,83,Nurse,Migraine,Headache and sensitivity,45
+Faye,Griffin,84,Chef,Food Poisoning,Nausea,50
+Gavin,Diaz,85,Student,Sprain,Ankle swelling,25
+Hazel,Hayes,86,Artist,Allergies,Rash,20
+Ivan,Myers,87,Driver,Fatigue,Dizziness,15
+June,Ford,88,Developer,Stress,Chest tightness,10
+Kobe,Hamilton,89,Banker,Back Pain,Lower back ache,25
+Luna,Graham,90,Doctor,Cold,Runny nose,10
+Milo,Sullivan,91,Teacher,Flu,Fever and Cough,55
+Naomi,Wallace,92,Engineer,Fracture,Leg pain,85
+Oscar,Woods,93,Nurse,Migraine,Headache and sensitivity,45
+Paige,Cole,94,Chef,Food Poisoning,Nausea,50
+Quentin,West,95,Student,Sprain,Ankle swelling,25
+Ruby,Jordan,96,Artist,Allergies,Rash,20
+Silas,Owens,97,Driver,Fatigue,Dizziness,15
+Tara,Reynolds,98,Developer,Stress,Chest tightness,10
+Umar,Fisher,99,Banker,Back Pain,Lower back ache,25
+Vivian,Ellis,100,Doctor,Cold,Runny nose,10
