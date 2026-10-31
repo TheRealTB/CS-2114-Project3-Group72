@@ -85,8 +85,9 @@ public class Patient {
     //Patient info (chart style)
     @Override
     public String toString() {
-        String s = "First Name: " + this.firstName + "\nLast Name: " + this.lastName
-            + "\nAge: " + this.age + "Occupation: " + this.occupation + "\nSymptoms: " + this.symptoms;
+        String s = "First Name: " + this.firstName + "\nLast Name: " 
+            + this.lastName + "\nAge: " + this.age + "Occupation: " 
+            + this.occupation + "\nSymptoms: " + this.symptoms;
         return s;
     }
     
