@@ -63,6 +63,25 @@ public class Patient {
         return (criticality>66) ? "Priority Admit" : (criticality>33) ? "Admit" : "Deny";
     }
     
+    //Generates a score based on where the patient is placed in the queue and their criticality
+    public int validateScore(String choice) {
+        //correct choice rewards 300 points
+        if(choice.equals(classifyPatient())) {
+            return 300;
+        //off-by-one case rewards 100 points for going one above 
+        }else if((choice.equals("Admit") && classifyPatient().equals("Deny"))
+            || (choice.equals("PriorityAdmit") && classifyPatient().equals("Admit"))){
+            return 100;
+        //off-by-one case docks 100 points for going one below
+        }else if((choice.equals("Admit") && classifyPatient().equals("Priority Admit")) 
+            || (choice.equals("Deny") && classifyPatient().equals("Admit"))) {
+            return -100;
+        //incorrect choice docks 200 points
+        }else {
+            return -200;
+        }
+    }
+    
     //Patient info (chart style)
     @Override
     public String toString() {
@@ -72,39 +91,47 @@ public class Patient {
     }
     
     //Create and edit patients below this line
+    
+    /*generates random number as a string,
+     *takes the substring of the string and 
+     *initializes variables with seed
+     *unique name first, last
+     * age and occupation go together and illness, symptoms, and 
+     * criticality go together
+     */
     public void generatePatient() {
-        //generates random 12 digit string and initializes variables with seed
+        
         String randSeed = Math.random() + "";
-        randSeed = randSeed.substring(2, 14);
-        //System.out.printf("\n\nRandom Seed %s", randSeed);
-        for(int col = 0; col < data[0].length-2; col++) {
-            int row = Integer.parseInt(randSeed.substring(col, col+2));
-            /*System.out.printf("\n\nRow: %d, col: %d, Data: %s", 
-            row, col, data[row][col]);
-            */
-            switch(col){
-                case 0: this.firstName = data[row][col];
-                    break;
-                case 1: this.lastName = data[row][col];
-                    break;
-                case 2: this.age = Integer.parseInt(data[row][col]);
-                    break;
-                case 3: this.occupation = data[row][col];
-                    break;
-                case 4: this.illness = data[row][col];
-                    this.symptoms = data[row][data[row].length-2];
-                    this.criticality = Integer.parseInt
-                        (data[row][data[row].length-1]);
-                    break;
-                default:
-                    System.out.printf("Statement has hit default case\n\n");
+        System.out.println("\n\nRANDOM SEED: " + randSeed);
+            randSeed = randSeed.substring(2, 10);
+          //System.out.printf("\n\nRandom Seed %s", randSeed);
+            for(int col = 0; col < data[0].length-2; col++) {
+                int row = Integer.parseInt(randSeed.substring(col, col+2));
+                System.out.printf("\n\nRow: %d, col: %d, Data: %s\n", 
+                row, col, data[row][col]);
+                switch(col){
+                    case 0: this.firstName = data[row][col];
+                        break;
+                    case 1: this.lastName = data[row][col];
+                        break;
+                    case 2: this.age = Integer.parseInt(data[row][col]);
+                        this.occupation = data[row][col];
+                        break;
+                    case 4: this.illness = data[row][col];
+                        this.symptoms = data[row][data[row].length-2];
+                        this.criticality = Integer.parseInt
+                            (data[row][data[row].length-1]);
+                        break;
+                    default:
+                        System.out.printf("Statement has hit default case\n\n");
+                }
             }
-        }
         System.out.printf("Name: %s %s, Age: %d, Occupation: %s,"
             + " \nIllness: %s,Symptoms: %s, Criticality: %d\n\n",
             firstName, lastName, age, occupation, 
             illness, symptoms, criticality);
     }
+        
     
     public String[][] getData(){
         return data;
@@ -114,9 +141,6 @@ public class Patient {
     }
     public String getLastName() {
         return lastName;
-    }
-    public String getName() {
-        return firstName + " " + lastName;
     }
     public int getAge() {
         return age;
@@ -129,8 +153,5 @@ public class Patient {
     }
     public String getSymptoms() {
         return symptoms;
-    }
-    public int getCriticality() {
-        return criticality;
     }
 }
