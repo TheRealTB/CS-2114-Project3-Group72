@@ -103,13 +103,13 @@ public class Patient {
     public void generatePatient() {
         
         String randSeed = Math.random() + "";
-        System.out.println("\n\nRANDOM SEED: " + randSeed);
+        //System.out.println("\n\nRANDOM SEED: " + randSeed);
             randSeed = randSeed.substring(2, 10);
           //System.out.printf("\n\nRandom Seed %s", randSeed);
             for(int col = 0; col < data[0].length-2; col++) {
                 int row = Integer.parseInt(randSeed.substring(col, col+2));
-                System.out.printf("\n\nRow: %d, col: %d, Data: %s\n", 
-                row, col, data[row][col]);
+                //System.out.printf("\n\nRow: %d, col: %d, Data: %s\n", 
+                //row, col, data[row][col]);
                 switch(col){
                     case 0: this.firstName = data[row][col];
                         break;
@@ -127,10 +127,10 @@ public class Patient {
                         System.out.printf("Statement has hit default case\n\n");
                 }
             }
-        System.out.printf("Name: %s %s, Age: %d, Occupation: %s,"
-            + " \nIllness: %s,Symptoms: %s, Criticality: %d\n\n",
-            firstName, lastName, age, occupation, 
-            illness, symptoms, criticality);
+        //System.out.printf("Name: %s %s, Age: %d, Occupation: %s,"
+            //+ " \nIllness: %s,Symptoms: %s, Criticality: %d\n\n",
+            //firstName, lastName, age, occupation, 
+            //illness, symptoms, criticality);
     }
         
     
