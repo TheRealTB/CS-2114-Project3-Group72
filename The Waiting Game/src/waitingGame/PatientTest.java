@@ -57,7 +57,7 @@ class PatientTest {
             int flags = 0;
             while(flags < 3) {
                 tp.generatePatient();
-                System.out.println(tp.validateScore(p));
+                //System.out.println(tp.validateScore(p));
                 switch(tp.validateScore(p)) {
                     case 300: flags ++; break;
                     case 100: flags++; break;

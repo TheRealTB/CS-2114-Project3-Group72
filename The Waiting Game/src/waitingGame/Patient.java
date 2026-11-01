@@ -123,8 +123,6 @@ public class Patient {
                         this.criticality = Integer.parseInt
                             (data[row][data[row].length-1]);
                         break;
-                    default:
-                        System.out.printf("Statement has hit default case\n\n");
                 }
             }
         //System.out.printf("Name: %s %s, Age: %d, Occupation: %s,"
