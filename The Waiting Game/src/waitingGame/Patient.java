@@ -153,4 +153,7 @@ public class Patient {
     public String getSymptoms() {
         return symptoms;
     }
+    public int getCriticality() {
+        return criticality;
+    }
 }
