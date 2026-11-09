@@ -55,6 +55,22 @@ For Deliverable 3, we focused primarily on implementing the core model and estab
 - Created the initial Swing layout.
 - Deferred event listeners, interface updates, and complete gameplay functionality to Deliverable 4.
 
+**Changes to validation and testing:**
+- Our specification placed patient priority validation in
+  `ChoiceValidator`, which is how we implemented it.
+  We kept validation separate from queue and scoring logic
+  so that it can be tested independently.
+- Our specification included testing for normal, invalid,
+  and extreme inputs. We implemented JUnit tests for
+  `ChoiceValidator`, `PatientQueue`, and `Patient`.
+- Since `Patient` does not have a constructor that allows
+  us to specify criticality, we used a helper method with
+  reflection in `ChoiceValidatorTest` to assign known
+  criticality values for testing.
+- We still need to verify how exact numerical priority
+  validation should interact with the queue's severity
+  categories.
+
 ### Model-View Independence
 
 Our model does not depend on the graphical interface.
@@ -109,22 +125,23 @@ We propose adding a feature that allows players to skip the next patient and mov
 
 This feature changes queue state and requires additional model logic.
 
-**Predicted classes affected:**
+**Predicted classes and methods affected:**
 
 | Class | Expected Changes |
 |---|---|
-| `PatientQueue` | Add `requeueNextPatient()` |
-| `MainMenu` | Add `skipNextPatient()` |
-| `GameView` | Add a Skip button and event listener |
-| `PatientQueueTest` | Add tests for requeue behavior |
+| `PatientQueue` | Add `requeueNextPatient()` to move a patient to the back of their severity group. |
+| `MainMenu` | Add `skipNextPatient()` to connect the player's action to the queue. |
+| `GameView` | Modify `buildLayout()` to add the Skip button and implement its event listener. |
+| `PatientQueueTest` | Add tests for `requeueNextPatient()` covering empty queues, one patient, and multiple patients in different priority groups. |
 
 **Classes not expected to change:**
 
-- `Patient`
-- `ChoiceValidator`
-- `ScoreManager`
+- `Patient`: Patient information and criticality will remain unchanged.
+- `ChoiceValidator`: The existing priority validation rules should not need modifications.
+- `ScoreManager`: Skipping will not affect the score under the proposed rules.
 
-We will compare these predictions with the actual implementation in Deliverable 4.
+This prediction assumes skipping does not change a patient's
+criticality or the player's score.
 
 ### Stretch Goals
 
