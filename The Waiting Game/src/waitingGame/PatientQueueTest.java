@@ -1,4 +1,4 @@
-package project03cs2114;
+package waitingGame;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -19,15 +19,16 @@ public class PatientQueueTest
         queue = new PatientQueue();
     }
 
+
     private Patient patientWithCriticality(int rating)
     {
-        return new Patient()
-        {
+        return new Patient() {
             @Override
             public void generatePatient()
             {
                 // Skip random generation for queue tests.
             }
+
 
             @Override
             public int getCriticality()
@@ -36,6 +37,7 @@ public class PatientQueueTest
             }
         };
     }
+
 
     @Test
     public void testEmptyQueue()
@@ -46,6 +48,7 @@ public class PatientQueueTest
         assertNull(queue.patientDeqeue());
         assertEquals(0, queue.getSize());
     }
+
 
     @Test
     public void testCriticalityCutoffs()
@@ -65,6 +68,7 @@ public class PatientQueueTest
         assertSame(regular, queue.patientDeqeue());
         assertTrue(queue.isEmpty());
     }
+
 
     @Test
     public void testPriorityAndArrivalOrder()
@@ -96,6 +100,7 @@ public class PatientQueueTest
         assertTrue(queue.isEmpty());
         assertNull(queue.patientPeek());
     }
+
 
     @Test
     public void testReuseAfterDrainingQueue()

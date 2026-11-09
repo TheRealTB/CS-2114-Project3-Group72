@@ -1,4 +1,4 @@
-package project03cs2114;
+package waitingGame;
 
 public class PatientQueue
 {
@@ -123,15 +123,15 @@ public class PatientQueue
     {
         if (lastNode != null)
         {
-            return lastNode.data; 
+            return lastNode.data;
         }
 
         if (firstNode == null)
         {
-            return null; 
+            return null;
         }
 
-        return dummyNode67Bucket.previous.data; 
+        return dummyNode67Bucket.previous.data;
     }
 
 

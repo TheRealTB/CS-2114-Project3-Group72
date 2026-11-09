@@ -1,4 +1,4 @@
-package project03cs2114;
+package waitingGame;
 
 class Node<E>
 {

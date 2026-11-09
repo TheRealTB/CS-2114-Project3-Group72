@@ -1,34 +1,51 @@
-package project03cs2114;
+package waitingGame;
+
 public class ScoreManager
 {
-    //~ Fields ................................................................
+    // ~ Fields ................................................................
     private int scores;
 
-    //~ Constructors ..........................................................
-    public ScoreManager() {
-        scores = 0;       
-    }
-    
-    public void addPoints(int points) {
-        if(points>=0) {
-        scores += points;
-    }
-    }
-    
-    public void subtractPoints(int points) {
-        if(points >= 0) {
-        scores -= points;
-        }
-    }
-    public void updateScore(int points) {
-        scores = points;
-    }
-    public int getScore() {
-        return scores;
-    }
-    public void resetScore() {
+    // ~ Constructors ..........................................................
+    public ScoreManager()
+    {
         scores = 0;
     }
-    //~Public  Methods ........................................................
+
+
+    public void addPoints(int points)
+    {
+        if (points >= 0)
+        {
+            scores += points;
+        }
+    }
+
+
+    public void subtractPoints(int points)
+    {
+        if (points >= 0)
+        {
+            scores -= points;
+        }
+    }
+
+
+    public void updateScore(int points)
+    {
+        scores = points;
+    }
+
+
+    public int getScore()
+    {
+        return scores;
+    }
+
+
+    public void resetScore()
+    {
+        scores = 0;
+    }
+    // ~Public Methods ........................................................
 
 }
