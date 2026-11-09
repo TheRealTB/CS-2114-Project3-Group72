@@ -173,7 +173,7 @@ We plan to add tests for:
 | `ChoiceValidatorTest.java` | Essan | Unit testing |
 | `MainMenu.java` | Caroline | Controller implementation |
 | `ScoreManager.java` | Megha | Scoring implementation |
-| `GameView.java` | Caroline | Initial GUI development |
+| `GameView.java` | Megha | Initial GUI development |
 | `Driver.java` | Caroline | Model demonstration driver |
 
 
