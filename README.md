@@ -159,7 +159,6 @@ We plan to add tests for:
 | Essan | Validation logic and testing |
 | Team | Queue improvements, integration testing, and debugging |
 
-Queue feature ownership will be finalized by the team.
 
 ## Attribution
 
