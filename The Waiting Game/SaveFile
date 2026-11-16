@@ -1,45 +1,45 @@
 5
-FirstName: Jonathan
-LastName: Gutierrez
-Age: 14
-Occupation: High School Student
+FirstName: Carolyn
+LastName: Wilson
+Age: 30
+Occupation: Pharmacist
 Symptoms: Lower back ache
 Illness Back Pain
 Criticality: 24
-FirstName: Karen
-LastName: Black
-Age: 60
-Occupation: Bank Manager
-Symptoms: Runny nose
-Illness Cold
-Criticality: 12
-FirstName: Emily
-LastName: Bailey
-Age: 2
-Occupation: Toddler
-Symptoms: Rash
-Illness Allergies
-Criticality: 21
-FirstName: Scott
-LastName: Lewis
+FirstName: Joseph
+LastName: Robinson
+Age: 48
+Occupation: Firefighter
+Symptoms: Lower back ache
+Illness Back Pain
+Criticality: 24
+FirstName: Charles
+LastName: Morgan
+Age: 68
+Occupation: Retired Seamstress
+Symptoms: Chest tightness
+Illness Stress
+Criticality: 11
+FirstName: Mary
+LastName: Hernandez
 Age: 19
-Occupation: Delivery Driver
-Symptoms: Ankle swelling
-Illness Sprain
-Criticality: 26
-FirstName: Patricia
-LastName: Flores
-Age: 29
-Occupation: Plumber
-Symptoms: Dizziness
-Illness Fatigue
-Criticality: 16
-FirstName: Jack
-LastName: Hansen
-Age: 19
-Occupation: Delivery Driver
+Occupation: College Intern
+Symptoms: Leg pain
+Illness Fracture
+Criticality: 86
+FirstName: Sandra
+LastName: Field
+Age: 20
+Occupation: Entry Level Clerk
 Symptoms: Nausea
 Illness Food Poisoning
 Criticality: 51
+FirstName: Laura
+LastName: Cruz
+Age: 33
+Occupation: Biologist
+Symptoms: Chest tightness
+Illness Stress
+Criticality: 11
 10
 1000

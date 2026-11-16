@@ -1,51 +1,34 @@
 package waitingGame;
-
 public class ScoreManager
 {
-    // ~ Fields ................................................................
+    //~ Fields ................................................................
     private int scores;
 
-    // ~ Constructors ..........................................................
-    public ScoreManager()
-    {
-        scores = 0;
+    //~ Constructors ..........................................................
+    public ScoreManager() {
+        scores = 0;       
     }
-
-
-    public void addPoints(int points)
-    {
-        if (points >= 0)
-        {
-            scores += points;
+    
+    public void addPoints(int points) {
+        if(points>=0) {
+        scores += points;
+    }
+    }
+    
+    public void subtractPoints(int points) {
+        if(points >= 0) {
+        scores -= points;
         }
     }
-
-
-    public void subtractPoints(int points)
-    {
-        if (points >= 0)
-        {
-            scores -= points;
-        }
-    }
-
-
-    public void updateScore(int points)
-    {
+    public void updateScore(int points) {
         scores = points;
     }
-
-
-    public int getScore()
-    {
+    public int getScore() {
         return scores;
     }
-
-
-    public void resetScore()
-    {
+    public void resetScore() {
         scores = 0;
     }
-    // ~Public Methods ........................................................
+    //~Public  Methods ........................................................
 
 }
