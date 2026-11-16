@@ -52,7 +52,7 @@ public class MainMenu
             return false;
         }
 
-        return queue.patientEnqeue(patient);
+        return queue.patientEnqueue(patient);
     }
 
 

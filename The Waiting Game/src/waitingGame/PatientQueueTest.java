@@ -45,7 +45,7 @@ public class PatientQueueTest
         assertTrue(queue.isEmpty());
         assertEquals(0, queue.getSize());
         assertNull(queue.patientPeek());
-        assertNull(queue.patientDeqeue());
+        assertNull(queue.patientDequeue());
         assertEquals(0, queue.getSize());
     }
 
@@ -57,15 +57,15 @@ public class PatientQueueTest
         Patient regular = patientWithCriticality(34);
         Patient priority = patientWithCriticality(67);
 
-        assertFalse(queue.patientEnqeue(denied));
+        assertFalse(queue.patientEnqueue(denied));
         assertTrue(queue.isEmpty());
 
-        assertTrue(queue.patientEnqeue(regular));
-        assertTrue(queue.patientEnqeue(priority));
+        assertTrue(queue.patientEnqueue(regular));
+        assertTrue(queue.patientEnqueue(priority));
         assertEquals(2, queue.getSize());
 
-        assertSame(priority, queue.patientDeqeue());
-        assertSame(regular, queue.patientDeqeue());
+        assertSame(priority, queue.patientDequeue());
+        assertSame(regular, queue.patientDequeue());
         assertTrue(queue.isEmpty());
     }
 
@@ -78,25 +78,25 @@ public class PatientQueueTest
         Patient secondRegular = patientWithCriticality(66);
         Patient secondPriority = patientWithCriticality(90);
 
-        queue.patientEnqeue(firstRegular);
-        queue.patientEnqeue(firstPriority);
-        queue.patientEnqeue(secondRegular);
-        queue.patientEnqeue(secondPriority);
+        queue.patientEnqueue(firstRegular);
+        queue.patientEnqueue(firstPriority);
+        queue.patientEnqueue(secondRegular);
+        queue.patientEnqueue(secondPriority);
 
         assertEquals(4, queue.getSize());
         assertSame(firstPriority, queue.patientPeek());
         assertEquals(4, queue.getSize());
 
-        assertSame(firstPriority, queue.patientDeqeue());
-        assertSame(secondPriority, queue.patientDeqeue());
+        assertSame(firstPriority, queue.patientDequeue());
+        assertSame(secondPriority, queue.patientDequeue());
         assertEquals(2, queue.getSize());
 
         // Only regular patients remain.
         assertSame(firstRegular, queue.patientPeek());
         assertEquals(2, queue.getSize());
 
-        assertSame(firstRegular, queue.patientDeqeue());
-        assertSame(secondRegular, queue.patientDeqeue());
+        assertSame(firstRegular, queue.patientDequeue());
+        assertSame(secondRegular, queue.patientDequeue());
         assertTrue(queue.isEmpty());
         assertNull(queue.patientPeek());
     }
@@ -108,21 +108,21 @@ public class PatientQueueTest
         Patient priority = patientWithCriticality(80);
         Patient regular = patientWithCriticality(50);
 
-        queue.patientEnqeue(priority);
+        queue.patientEnqueue(priority);
         assertFalse(queue.isEmpty());
         assertSame(priority, queue.patientPeek());
-        assertSame(priority, queue.patientDeqeue());
+        assertSame(priority, queue.patientDequeue());
         assertTrue(queue.isEmpty());
 
-        queue.patientEnqeue(priority);
-        queue.patientEnqeue(regular);
-        assertSame(priority, queue.patientDeqeue());
-        assertSame(regular, queue.patientDeqeue());
+        queue.patientEnqueue(priority);
+        queue.patientEnqueue(regular);
+        assertSame(priority, queue.patientDequeue());
+        assertSame(regular, queue.patientDequeue());
         assertTrue(queue.isEmpty());
 
-        queue.patientEnqeue(regular);
+        queue.patientEnqueue(regular);
         assertSame(regular, queue.patientPeek());
-        assertSame(regular, queue.patientDeqeue());
+        assertSame(regular, queue.patientDequeue());
         assertEquals(0, queue.getSize());
     }
 }

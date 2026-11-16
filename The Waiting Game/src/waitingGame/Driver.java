@@ -58,7 +58,7 @@ public class Driver
 
         // Remove patient
         Patient treated =
-            game.getPatients().patientDeqeue();
+            game.getPatients().patientDequeue();
 
         System.out.println(
             "\nRemoved Patient:");
