@@ -83,11 +83,13 @@ public class Patient {
     }
     
     //Patient info (chart style)
+    //Don't edit, needed for save
     @Override
     public String toString() {
-        String s = "First Name: " + this.firstName + "\nLast Name: " 
-            + this.lastName + "\nAge: " + this.age + "Occupation: " 
-            + this.occupation + "\nSymptoms: " + this.symptoms;
+        String s = "FirstName: " + this.firstName + "\nLastName: " 
+            + this.lastName + "\nAge: " + this.age + "\nOccupation: " 
+            + this.occupation + "\nSymptoms: " + this.symptoms 
+            + "\nIllness " + this.illness + "\nCriticality: " + this.criticality;
         return s;
     }
     
@@ -116,7 +118,7 @@ public class Patient {
                     case 1: this.lastName = data[row][col];
                         break;
                     case 2: this.age = Integer.parseInt(data[row][col]);
-                        this.occupation = data[row][col];
+                        this.occupation = data[row][col+1];
                         break;
                     case 4: this.illness = data[row][col];
                         this.symptoms = data[row][data[row].length-2];
@@ -155,5 +157,15 @@ public class Patient {
     }
     public int getCriticality() {
         return criticality;
+    }
+    
+    public void setPatient(String[] params) {
+        this.firstName = params[0];
+        this.lastName = params[1];
+        this.age = Integer.parseInt(params[2]);
+        this.occupation = params[3];
+        this.illness = params[4];
+        this.symptoms = params[5];
+        this.criticality = Integer.parseInt(params[6]);
     }
 }
