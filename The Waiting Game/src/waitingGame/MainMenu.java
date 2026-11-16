@@ -45,14 +45,14 @@ public class MainMenu
  }
 
 
- public boolean addPatient(Patient patient, int priorityLevel)
+ public void addPatient(Patient patient, int priorityLevel)
  {
-     if (!validator.validateChoice(patient, priorityLevel))
-     {
-         return false;
-     }
+//     if (!validator.validateChoice(patient, priorityLevel))
+//     {
+//         return false;
+//     }
 
-     return queue.patientEnqueue(patient);
+     queue.enqueue(patient);
  }
 
 

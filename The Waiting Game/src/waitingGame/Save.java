@@ -29,7 +29,7 @@ public class Save {
                             }
                             Patient p = new Patient();
                             p.setPatient(pArray);
-                            q.patientEnqueue(p);
+                            q.enqueue(p);
                             if(j < ql-1) {in = s.nextLine();}
                         }
                         data[0] = q;

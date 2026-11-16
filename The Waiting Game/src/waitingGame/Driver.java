@@ -32,11 +32,10 @@ public class Driver
         // Simulate player selecting the patient's actual criticality
         int selectedPriority = patient.getCriticality();
 
-        boolean added =
-            game.addPatient(patient, selectedPriority);
+        game.addPatient(patient, selectedPriority);
 
         System.out.println(
-            "\nPatient added to queue: " + added);
+            "\nPatient added to queue");
 
         System.out.println(
             "Queue size: "

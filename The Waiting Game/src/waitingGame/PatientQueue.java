@@ -69,7 +69,7 @@ public class PatientQueue
         return toReturn2;
     }
 
-    public boolean enqueue(Patient toAdd) {
+    public void enqueue(Patient toAdd) {
         Node<Patient> newPatient = new Node<Patient>(toAdd);
             if (firstNode == null){
                 firstNode = newPatient;
@@ -77,70 +77,32 @@ public class PatientQueue
                 newPatient.previous = null;
                 dummyNode67Bucket.previous = firstNode;
 
-            }else            {
+            }else{
                 Node<Patient> previousFirst = firstNode;
                 newPatient.next = firstNode;
                 previousFirst.previous = newPatient;
                 firstNode = newPatient;
             }
         size++;
-        return true;
     }
     
-    public boolean patientEnqueue(Patient toAdd)
-    {
-        int patientCategorization = toAdd.getCriticality();
-
-        if (patientCategorization > 33)
-        {
-            Node<Patient> newPatient = new Node<Patient>(toAdd);
-            if (patientCategorization < 67)
-            {
-                if (firstNode == null)
-                {
-                    firstNode = newPatient;
-                    newPatient.next = dummyNode67Bucket;
-                    newPatient.previous = null;
-                    dummyNode67Bucket.previous = firstNode;
-
-                }
-                else
-                {
-                    Node<Patient> previousFirst = firstNode;
-                    newPatient.next = firstNode;
-                    previousFirst.previous = newPatient;
-                    firstNode = newPatient;
-                }
-
-            }
-            else
-            {
-                if (lastNode == null)
-                {
-                    lastNode = newPatient;
-                    newPatient.previous = dummyNode67Bucket;
-                    dummyNode67Bucket.next = lastNode;
-                }
-                else
-                {
-                    Node<Patient> storeNext = dummyNode67Bucket.next;
-                    dummyNode67Bucket.next = newPatient;
-                    newPatient.previous = dummyNode67Bucket;
-                    newPatient.next = storeNext;
-                    storeNext.previous = newPatient;
-                }
-            }
-
-            size++;
-            return true;
+    public void priorityEnqueue(Patient toAdd) {
+        Node<Patient> newPatient = new Node<Patient>(toAdd);
+        if (lastNode == null){
+            lastNode = newPatient;
+            newPatient.previous = dummyNode67Bucket;
+            dummyNode67Bucket.next = lastNode;
+        }else{
+            Node<Patient> storeNext = dummyNode67Bucket.next;
+            dummyNode67Bucket.next = newPatient;
+            newPatient.previous = dummyNode67Bucket;
+            newPatient.next = storeNext;
+            storeNext.previous = newPatient;
         }
-        return false;
-
+        size++;
     }
-
-
-    public Patient patientPeek()
-    {
+    
+    public Patient patientPeek(){
         if (lastNode != null)
         {
             return lastNode.data; 
