@@ -1,45 +1,51 @@
 5
-FirstName: Carolyn
-LastName: Wilson
-Age: 30
-Occupation: Pharmacist
-Symptoms: Lower back ache
-Illness Back Pain
-Criticality: 24
-FirstName: Joseph
-LastName: Robinson
-Age: 48
-Occupation: Firefighter
-Symptoms: Lower back ache
-Illness Back Pain
-Criticality: 24
-FirstName: Charles
-LastName: Morgan
-Age: 68
-Occupation: Retired Seamstress
+FirstName: Steven
+LastName: Johnson
+Age: 24
+Occupation: Barista
 Symptoms: Chest tightness
 Illness Stress
 Criticality: 11
-FirstName: Mary
-LastName: Hernandez
-Age: 19
-Occupation: College Intern
+Time: 1809
+FirstName: Sarah
+LastName: Diaz
+Age: 24
+Occupation: Flight Attendant
+Symptoms: Lower back ache
+Illness Back Pain
+Criticality: 24
+Time: 1224
+FirstName: Joseph
+LastName: Lee
+Age: 5
+Occupation: Preschooler
 Symptoms: Leg pain
 Illness Fracture
 Criticality: 86
+Time: 646
 FirstName: Sandra
-LastName: Field
-Age: 20
-Occupation: Entry Level Clerk
-Symptoms: Nausea
-Illness Food Poisoning
-Criticality: 51
-FirstName: Laura
-LastName: Cruz
-Age: 33
-Occupation: Biologist
-Symptoms: Chest tightness
-Illness Stress
-Criticality: 11
+LastName: Wade
+Age: 48
+Occupation: Real Estate Agent
+Symptoms: Leg pain
+Illness Fracture
+Criticality: 86
+Time: 646
+FirstName: George
+LastName: Ramirez
+Age: 46
+Occupation: Customer Service
+Symptoms: Fever and Cough
+Illness Flu
+Criticality: 56
+Time: 801
+FirstName: Carolyn
+LastName: Wilson
+Age: 41
+Occupation: Financial Advisor
+Symptoms: Fever and Cough
+Illness Flu
+Criticality: 56
+Time: 801
 10
 1000

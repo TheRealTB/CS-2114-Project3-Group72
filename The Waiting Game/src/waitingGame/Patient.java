@@ -11,10 +11,10 @@ package waitingGame;
 import java.io.*;
 
 //TODO: Make more interesting/unique illnesses & symptoms + multi-symptom
-
+//TODO: Time implementation
 public class Patient {
     private String firstName, lastName, occupation, illness, symptoms;
-    private int age, criticality;
+    private int age, criticality, time;
     private String[][] data;
     
     
@@ -46,6 +46,7 @@ public class Patient {
             this.age = 18; this.occupation = "Student";
             this.illness = "No Illness"; this.symptoms = "Aysymptomatic";
             this.criticality = 1;
+            this.time = 60;
         }catch(IOException e) {
             System.out.println("Unhadnled IO Exception"
                 + "\nPatient variables are defaulted\n\n");
@@ -53,6 +54,7 @@ public class Patient {
             this.age = 18; this.occupation = "Student";
             this.illness = "No Illness"; this.symptoms = "Aysymptomatic";
             this.criticality = 1;
+            this.time = 60;
         }
         this.generatePatient();
     }
@@ -89,7 +91,8 @@ public class Patient {
         String s = "FirstName: " + this.firstName + "\nLastName: " 
             + this.lastName + "\nAge: " + this.age + "\nOccupation: " 
             + this.occupation + "\nSymptoms: " + this.symptoms 
-            + "\nIllness " + this.illness + "\nCriticality: " + this.criticality;
+            + "\nIllness " + this.illness + "\nCriticality: " + this.criticality
+            + "\nTime: " + this.time;
         return s;
     }
     
@@ -106,31 +109,28 @@ public class Patient {
         
         String randSeed = Math.random() + "";
         //System.out.println("\n\nRANDOM SEED: " + randSeed);
-            randSeed = randSeed.substring(2, 10);
-          //System.out.printf("\n\nRandom Seed %s", randSeed);
-            for(int col = 0; col < data[0].length-2; col++) {
-                int row = Integer.parseInt(randSeed.substring(col, col+2));
-                //System.out.printf("\n\nRow: %d, col: %d, Data: %s\n", 
-                //row, col, data[row][col]);
-                switch(col){
-                    case 0: this.firstName = data[row][col];
-                        break;
-                    case 1: this.lastName = data[row][col];
-                        break;
-                    case 2: this.age = Integer.parseInt(data[row][col]);
-                        this.occupation = data[row][col+1];
-                        break;
-                    case 4: this.illness = data[row][col];
-                        this.symptoms = data[row][data[row].length-2];
-                        this.criticality = Integer.parseInt
-                            (data[row][data[row].length-1]);
-                        break;
-                }
+        randSeed = randSeed.substring(2, 10);
+        //System.out.printf("\n\nRandom Seed %s", randSeed);
+        for(int col = 0; col < data[0].length-2; col++) {
+            int row = Integer.parseInt(randSeed.substring(col, col+2));
+            //System.out.printf("\n\nRow: %d, col: %d, Data: %s\n", 
+            //row, col, data[row][col]);
+            switch(col){
+                case 0: this.firstName = data[row][col];
+                    break;
+                case 1: this.lastName = data[row][col];
+                    break;
+                case 2: this.age = Integer.parseInt(data[row][col]);
+                    this.occupation = data[row][col+1];
+                    break;
+                case 4: this.illness = data[row][col];
+                    this.symptoms = data[row][data[row].length-2];
+                    this.criticality = Integer.parseInt
+                        (data[row][data[row].length-1]);
+                    this.time = (int)(6000/Math.sqrt(criticality));
+                    break;
             }
-        //System.out.printf("Name: %s %s, Age: %d, Occupation: %s,"
-            //+ " \nIllness: %s,Symptoms: %s, Criticality: %d\n\n",
-            //firstName, lastName, age, occupation, 
-            //illness, symptoms, criticality);
+        }
     }
         
     
@@ -158,6 +158,9 @@ public class Patient {
     public int getCriticality() {
         return criticality;
     }
+    public int getTime() {
+        return time;
+    }
     
     public void setPatient(String[] params) {
         this.firstName = params[0];
@@ -167,5 +170,6 @@ public class Patient {
         this.illness = params[4];
         this.symptoms = params[5];
         this.criticality = Integer.parseInt(params[6]);
+        this.time = Integer.parseInt(params[7]);
     }
 }

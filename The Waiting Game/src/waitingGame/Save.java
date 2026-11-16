@@ -22,10 +22,10 @@ public class Save {
                         //queue
                         PatientQueue q = new PatientQueue();
                         for(int j = 0; j < ql; j++) {
-                            String[] pArray = new String[7];
-                            for(int l = 0; l < 7; l++) {
+                            String[] pArray = new String[8];
+                            for(int l = 0; l < 8; l++) {
                                 System.out.println(pArray[l] = in.substring(in.indexOf(" ") + 1));
-                                if(l < 6) {in = s.nextLine();}
+                                if(l < 7) {in = s.nextLine();}
                             }
                             Patient p = new Patient();
                             p.setPatient(pArray);
@@ -37,10 +37,10 @@ public class Save {
                         break;
                     case 2:
                         //incoming patient
-                        String[] pArray = new String[7];
-                        for(int l = 0; l < 7; l++) {
+                        String[] pArray = new String[8];
+                        for(int l = 0; l < 8; l++) {
                             System.out.println(pArray[l] = in.substring(in.indexOf(" ") + 1));
-                            if(l < 6) {in = s.nextLine();}
+                            if(l < 7) {in = s.nextLine();}
                         }
                         Patient p = new Patient();
                         p.setPatient(pArray);
