@@ -66,6 +66,7 @@ public class Patient {
  //Generates a score based on where the patient is placed in the queue and their criticality
  public int validateScore(String choice) {
      //correct choice rewards 300 points
+     System.out.println("entered validate Score");
      if(choice.equals(classifyPatient())) {
          return 300;
      //off-by-one case rewards 100 points for going one above 
