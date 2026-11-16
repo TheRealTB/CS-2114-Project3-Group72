@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package waitingGame;
 
 class Node<E>
@@ -11,3 +12,18 @@ class Node<E>
         this.data = data;
     }
 }
+=======
+package waitingGame;
+
+class Node<E>
+{
+    final E data;
+    Node<E> next;
+    Node<E> previous;
+
+    Node(E data)
+    {
+        this.data = data;
+    }
+}
+>>>>>>> TB

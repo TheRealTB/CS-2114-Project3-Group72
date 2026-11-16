@@ -1,0 +1,45 @@
+5
+FirstName: Jonathan
+LastName: Gutierrez
+Age: 14
+Occupation: High School Student
+Symptoms: Lower back ache
+Illness Back Pain
+Criticality: 24
+FirstName: Karen
+LastName: Black
+Age: 60
+Occupation: Bank Manager
+Symptoms: Runny nose
+Illness Cold
+Criticality: 12
+FirstName: Emily
+LastName: Bailey
+Age: 2
+Occupation: Toddler
+Symptoms: Rash
+Illness Allergies
+Criticality: 21
+FirstName: Scott
+LastName: Lewis
+Age: 19
+Occupation: Delivery Driver
+Symptoms: Ankle swelling
+Illness Sprain
+Criticality: 26
+FirstName: Patricia
+LastName: Flores
+Age: 29
+Occupation: Plumber
+Symptoms: Dizziness
+Illness Fatigue
+Criticality: 16
+FirstName: Jack
+LastName: Hansen
+Age: 19
+Occupation: Delivery Driver
+Symptoms: Nausea
+Illness Food Poisoning
+Criticality: 51
+10
+1000

@@ -114,6 +114,7 @@ public class Patient
             return -200;
         }
     }
+<<<<<<< HEAD
 
 
     // Patient info (chart style)
@@ -123,6 +124,17 @@ public class Patient
         String s = "First Name: " + this.firstName + "\nLast Name: "
             + this.lastName + "\nAge: " + this.age + "\nOccupation: "
             + this.occupation + "\nSymptoms: " + this.symptoms;
+=======
+    
+    //Patient info (chart style)
+    //Don't edit, needed for save
+    @Override
+    public String toString() {
+        String s = "FirstName: " + this.firstName + "\nLastName: " 
+            + this.lastName + "\nAge: " + this.age + "\nOccupation: " 
+            + this.occupation + "\nSymptoms: " + this.symptoms 
+            + "\nIllness " + this.illness + "\nCriticality: " + this.criticality;
+>>>>>>> TB
         return s;
     }
 
@@ -138,6 +150,7 @@ public class Patient
     {
 
         String randSeed = Math.random() + "";
+<<<<<<< HEAD
         // System.out.println("\n\nRANDOM SEED: " + randSeed);
         randSeed = randSeed.substring(2, 10);
         // System.out.printf("\n\nRandom Seed %s", randSeed);
@@ -164,6 +177,29 @@ public class Patient
                     this.criticality =
                         Integer.parseInt(data[row][data[row].length - 1]);
                     break;
+=======
+        //System.out.println("\n\nRANDOM SEED: " + randSeed);
+            randSeed = randSeed.substring(2, 10);
+          //System.out.printf("\n\nRandom Seed %s", randSeed);
+            for(int col = 0; col < data[0].length-2; col++) {
+                int row = Integer.parseInt(randSeed.substring(col, col+2));
+                //System.out.printf("\n\nRow: %d, col: %d, Data: %s\n", 
+                //row, col, data[row][col]);
+                switch(col){
+                    case 0: this.firstName = data[row][col];
+                        break;
+                    case 1: this.lastName = data[row][col];
+                        break;
+                    case 2: this.age = Integer.parseInt(data[row][col]);
+                        this.occupation = data[row][col+1];
+                        break;
+                    case 4: this.illness = data[row][col];
+                        this.symptoms = data[row][data[row].length-2];
+                        this.criticality = Integer.parseInt
+                            (data[row][data[row].length-1]);
+                        break;
+                }
+>>>>>>> TB
             }
         }
         // System.out.printf("Name: %s %s, Age: %d, Occupation: %s,"
@@ -218,5 +254,15 @@ public class Patient
     public int getCriticality()
     {
         return criticality;
+    }
+    
+    public void setPatient(String[] params) {
+        this.firstName = params[0];
+        this.lastName = params[1];
+        this.age = Integer.parseInt(params[2]);
+        this.occupation = params[3];
+        this.illness = params[4];
+        this.symptoms = params[5];
+        this.criticality = Integer.parseInt(params[6]);
     }
 }
