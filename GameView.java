@@ -102,8 +102,7 @@ public class GameView
             "Name: " + patientName + " " + patient.getLastName() + "\n"
                 + "Age: " + patientAge + "\n" + "Occupation: "
                 + patientOccupation + "\n" + "Symptoms: " + patientSymptoms
-                + "\n" + "Probable Illness: " + patientIllness + "\n"
-                + "Patient Criticality: " + patientCriticality);
+                + "\n" + "Probable Illness: " + patientIllness);
 
     }
 
