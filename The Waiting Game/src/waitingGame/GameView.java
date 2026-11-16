@@ -239,9 +239,7 @@ public class GameView
         boolean addedPatient = false;
         if (choice.equals("Admit") || choice.equals("PriorityAdmit"))
         {
-            addedPatient = game.addPatient(
-                game.getCurrentPatient(),
-                game.getCurrentPatient().getCriticality());
+            game.addPatient(game.getCurrentPatient(),game.getCurrentPatient().getCriticality());
 
         }
         refreshView();
