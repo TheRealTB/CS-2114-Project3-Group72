@@ -1,4 +1,4 @@
-package project03cs2114;
+package waitingGame;
 
 import javax.swing.DefaultListModel;
 
@@ -57,7 +57,8 @@ public class GameView
         treatNextButton = new JButton("Click To Move On To the Next Patient");
         newGameButton = new JButton("Click to start a new game");
         denyPatientButton = new JButton("Click to Deny Patient Admission");
-        admitPatientNButton = new JButton("Click to admit non priority patient");
+        admitPatientNButton =
+            new JButton("Click to admit non priority patient");
         admitPatientPButton = new JButton("Click to admit Priority Patient");
 
         JPanel mainPanel = new JPanel(new GridLayout(1, 2));
@@ -162,7 +163,7 @@ public class GameView
             @Override
             public void actionPerformed(ActionEvent event)
             {
-               handleNextArrival();
+                handleNextArrival();
             }
         });
         newGameButton.addActionListener(new ActionListener() {
@@ -171,24 +172,27 @@ public class GameView
                 handleNewGame();
             }
         });
-        
+
         denyPatientButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent event) {
+            public void actionPerformed(ActionEvent event)
+            {
                 System.out.println("entered action listener");
                 handleChoice("Deny");
             }
         });
-        admitPatientNButton.addActionListener(new ActionListener(){
+        admitPatientNButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent event) {
+            public void actionPerformed(ActionEvent event)
+            {
                 handleChoice("Admit");
             }
         });
-        
+
         admitPatientPButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent event) {
+            public void actionPerformed(ActionEvent event)
+            {
                 handleChoice("PriorityAdmit");
             }
         });
@@ -216,41 +220,48 @@ public class GameView
         displayPatientDetails(game.getCurrentPatient());
         displayMessage("New Game Has Started");
     }
+
+
     private void handleNextArrival()
     {
         Patient nextPatient = game.generatePatient();
         displayPatientDetails(nextPatient);
         displayMessage("New patient arrived.");
     }
-    
-    private void handleChoice(String choice) {
-       game.updateScore(game.getCurrentPatient(), choice);
-       int newScore = game.getScore();
-       String newScoreInput = String.valueOf(newScore);
-       
-       boolean addedPatient = false;
-       if(choice.equals("Admit") || choice.equals("PriorityAdmit")) {
-           addedPatient = game.addPatient(game.getCurrentPatient(), game.getCurrentPatient().getCriticality());
-           
-       }
-       refreshView();
-       scoreLabel.setText(newScoreInput);
-       handleNextArrival();
 
-       if (addedPatient)
-       {
-           displayMessage("Added to waitlist.");
-       }
-       else if (choice.equals("Admit") || choice.equals("PriorityAdmit"))
-       {
-           displayMessage("Admission rejected.");
-       }
+
+    private void handleChoice(String choice)
+    {
+        game.updateScore(game.getCurrentPatient(), choice);
+        int newScore = game.getScore();
+        String newScoreInput = String.valueOf(newScore);
+
+        boolean addedPatient = false;
+        if (choice.equals("Admit") || choice.equals("PriorityAdmit"))
+        {
+            addedPatient = game.addPatient(
+                game.getCurrentPatient(),
+                game.getCurrentPatient().getCriticality());
+
+        }
+        refreshView();
+        scoreLabel.setText(newScoreInput);
+        handleNextArrival();
+
+        if (addedPatient)
+        {
+            displayMessage("Added to waitlist.");
+        }
+        else if (choice.equals("Admit") || choice.equals("PriorityAdmit"))
+        {
+            displayMessage("Admission rejected.");
+        }
     }
-    
+
+
     public static void main(String[] args)
     {
-        javax.swing.SwingUtilities.invokeLater(new Runnable()
-        {
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run()
             {
